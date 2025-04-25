@@ -248,3 +248,7 @@ html, body {
   pointer-events: none; /* Kalplerin sayfa ile etkileşime girmesini engeller */
   overflow: hidden; /* Kalp animasyonlarının taşmasını engeller */
 }
+html, body {
+  height: 100%;
+  overflow-y: auto; /* Dikey kaydırma özelliğini aktif et */
+}

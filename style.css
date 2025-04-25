@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2;
+    top: 20vh;
+  }
+  
+  .name {
+    font-size: 3rem;
+    font-weight: bold;
+    animation: glow 2s infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #ff7eb3;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff65a3;
+    }
+  }
+  
+  .message {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    animation: fadeIn 3s ease-in-out infinite alternate;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+  }
+  
+  button {
+    margin-top: 30px;
+    padding: 15px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    background-color: #ff5e7d;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 94, 125, 0.5);
+    transition: transform 0.2s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+  }
+  
+  .hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    transform: rotate(45deg);
+    animation: floatHearts 5s linear infinite;
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+  }
+  
+  .heart::before {
+    top: -10px;
+    left: 0;
+  }
+  
+  .heart::after {
+    left: -10px;
+    top: 0;
+  }
+  
+  @keyframes floatHearts {
+    0% {
+      transform: translateY(0) rotate(45deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) rotate(45deg);
+      opacity: 0;
+    }
+  }
+
+/* Önceki stiller aynı kalıyor, sadece altına yenilerini ekle */
+
+.marquee {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 0;
+    animation: scroll 15s linear infinite;
+    z-index: 1000;
+  }
+  
+  @keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  .letter-section {
+    margin-top: 50px;
+  }
+  
+  textarea {
+    width: 90%;
+    max-width: 500px;
+    height: 150px;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1rem;
+    resize: none;
+    border: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    outline: none;
+  }
+  
+  #letterDisplay {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    animation: fadeInUp 1s ease;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  /* Önceki stiller burada yer alacak, sadece "letterDisplay" kısmına stil ekledim */
+
+.letter-section {
+    margin-top: 50px;
+  }
+  
+  textarea {
+    width: 90%;
+    max-width: 500px;
+    height: 150px;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1rem;
+    resize: none;
+    border: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    outline: none;
+  }
+  
+  #letterDisplay {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    animation: fadeInUp 1s ease;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

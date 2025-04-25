@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buse'ye Aşk Sayfası</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="marquee">💘 Seni Seviyorum Buse 💘</div>
+
+  <div class="container">
+    <h1 class="name">Buse 💖</h1>
+    <p class="message" id="loveMessage">Seni çok seviyorum!</p>
+    <button onclick="showSurprise()">🎁 Sürpriz</button>
+
+    <div class="letter-section">
+      <h2>Aşk Mektubum Sana 💌</h2>
+      <button onclick="showLetter()">Göster</button>
+      <div id="letterDisplay" class="hidden"></div>
+    </div>
+  </div>
+
+  <div class="hearts" id="heartsContainer"></div>
+
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
+    Tarayıcınız ses öğesini desteklemiyor.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

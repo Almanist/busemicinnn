@@ -220,4 +220,31 @@
       transform: translateY(0);
     }
   }
-  
+  /* Body ve HTML elementlerini tam yüksekliğe ayarla */
+html, body {
+  height: 100%; /* Sayfa yüksekliğini %100 yapıyoruz */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Yalnızca dikey kaydırma olmalı, yatay kaydırma engelleniyor */
+}
+
+/* Container'a yeterli yükseklik ekleyelim */
+.container {
+  min-height: 100vh; /* Sayfa en az ekran boyutunda olsun */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Kalp ve animasyonlar için belirli bir yüksekliğe izin ver */
+#heartsContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Kalplerin sayfa ile etkileşime girmesini engeller */
+  overflow: hidden; /* Kalp animasyonlarının taşmasını engeller */
+}
